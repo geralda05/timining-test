@@ -1,0 +1,171 @@
+@import '../../app.component.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* CODIGO CSS DE TABLAS */
+thead th{
+    color:white;
+}
+tbody td{
+    vertical-align: middle !important;
+}
+.collapse-table-row {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.collapse-table-row caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+.collapse-table-row tr {
+    padding: .35em;
+}
+
+.collapse-table-row th,
+.collapse-table-row td {
+    padding: .625em;
+    text-align: center;
+    font-size:14px
+}
+
+
+.collapse-table-row th {
+    font-size: .75em !important;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+    .text-status{
+        display:inline-block !important;
+        color:inherit !important;
+    }
+    .collapse-table-row {
+        border: 0;
+    }
+    .table td, .table th {
+        border-top:0 !important
+    }
+    .collapse-table-row caption {
+        font-size: 1.3em;
+    }
+    .collapse-table-row thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .collapse-table-row tr {
+        display: block;
+        margin-bottom: .625em;
+    }
+    .collapse-table-row td {
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    .collapse-table-row td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .collapse-table-row td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* CONFIGURACION DE TEXTO */
+.fs-icons-c{
+    font-size:25px !important
+}
+.text-red{
+    color:red
+}
+.j-content-space-b{
+    justify-content: space-between
+}
+.text-green{
+    color:green
+}
+
+/* SIDEBAR STICKY */
+.sticky-devices{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; min-width:200px
+}
+
+/* CONTENEDOR DE GRAFICA */
+.container-chart{
+    width: 100%; 
+    height: 350px; 
+    display: block;
+}
+::ng-deep .ngx-pagination{
+    padding-left:0 !important
+}
+.error-message{
+    color:gray; 
+    font-size:12px; 
+    cursor:pointer
+}
+
+.custom-height{
+    min-height:calc(100vh - 60px)
+}
+
+.h-60px{
+    height:60px
+}
+  
+/* estilos de checkboxs en sticky */ 
+input[type="checkbox"] { 
+    display: none; 
+}
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}  
+input[type="checkbox"] + label:last-child { 
+    margin-bottom: 0; 
+}  
+input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #007bff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

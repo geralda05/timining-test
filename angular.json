@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "timining"
+    }
+  },
+  "defaultProject": "timining",
+  "cli": {
+    "analytics": "9d14f1d9-571a-4593-aaab-8f56b39e9390"
+  }
 }

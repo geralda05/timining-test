@@ -1,0 +1,30 @@
+@import '../../app.component.scss';
+
+.h-100vh{
+    height:100vh;
+}
+.main-bg-img{
+    background-image:url('https://media.cnnchile.com/sites/2/2019/03/santiago.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.company-logo{
+    top:-50px; 
+    position:relative
+}
+.img-logo{
+    background-color: #FFF; 
+    border-radius:20px;
+}
+.login-form{
+    margin-top: -25px
+}
+.main-cover-img{
+    background-color:rgb(1,1,1,.5) !important;
+}
+@media screen and (min-width:576px){
+    input{
+        min-width:250px;
+    }
+}

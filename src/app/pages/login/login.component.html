@@ -1,0 +1,24 @@
+<div class="w-100 main-bg-img h-100vh d-flex">
+    <div class="w-100 main-cover-img d-flex justify-content-center align-items-center">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-0 p-2 px-0 company-logo">
+                  <img src="https://timining.com/content/themes/meat-theme/dist/images/logos/main-logo.svg" class="p-2 img-logo">
+                  <br>LOGIN
+                </h5>
+                <form class="text-right login-form" #loginForm="ngForm" ngNativeValidate (ngSubmit)="login()">
+                    <div class="form-group mb-2">
+                      <input type="email" class="form-control" [(ngModel)]="user" name="user" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="loading">
+                      <ng-container *ngIf="loading == false">Sign in</ng-container>
+                      <fa-icon *ngIf="loading == true" [icon]="faSpinner" [spin]="true"></fa-icon></button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
